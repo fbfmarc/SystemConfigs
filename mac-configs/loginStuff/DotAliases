@@ -1,0 +1,16 @@
+alias l='ls -F'
+alias ll='ls -lF'
+alias la='ls -aF'
+alias lla='ls -alF'
+alias pu='pushd'
+alias po='popd'
+alias cls='clear'
+alias h='history'
+
+alias mongod='/usr/local/bin/mongod --auth --dbpath $HOME/mongo/data/db'
+
+alias subl='sublime -a'
+alias subln='sublime -n'
+
+alias nano='/usr/local/bin/nano'
+alias lynx='/Applications/Lynxlet.app/Contents/Resources/lynx/bin/lynx'

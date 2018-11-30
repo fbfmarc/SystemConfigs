@@ -1,0 +1,24 @@
+export PS1='\[\033[36m\]\u@\h:\W->\[\033[0m\] '
+export CLICOLOR=1
+
+source ~/.aliases
+
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+export GIT_HOME='/usr/local/Cellar/git/2.7.0/bin'
+source ~/.git-bash-for-mac.sh
+PATH=$GIT_HOME:$PATH
+
+export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+
+export GOPATH=$HOME/development/go
+
+# small functions to get vs code running from command line.  The first 
+# opens a new instance of VS code, the second uses an existing instance.
+nvscode () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+vscode () { VSCODE_CWD="$PWD" open -b "com.microsoft.VSCode" --args $* ;}
+
+
+# text based browsing (if I'm ssh'ed in from another machine)
+export LYNX_CFG='~/lynx.cfg'
+
