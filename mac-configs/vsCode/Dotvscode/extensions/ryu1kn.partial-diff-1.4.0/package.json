@@ -1,0 +1,223 @@
+{
+	"name": "partial-diff",
+	"displayName": "Partial Diff",
+	"description": "Compare (diff) text selections within a file, across files, or to the clipboard",
+	"version": "1.4.0",
+	"publisher": "ryu1kn",
+	"license": "SEE LICENSE IN LICENSE.txt",
+	"icon": "images/partial-diff_128x128.png",
+	"bugs": {
+		"url": "https://github.com/ryu1kn/vscode-partial-diff/issues"
+	},
+	"homepage": "https://github.com/ryu1kn/vscode-partial-diff/blob/master/README.md",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ryu1kn/vscode-partial-diff.git"
+	},
+	"engines": {
+		"vscode": "^1.7.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"keywords": [
+		"vscode",
+		"diff"
+	],
+	"telemetryKey": "99489808-a33c-4235-af6d-04f95a652ead",
+	"activationEvents": [
+		"onCommand:extension.partialDiff.markSection1",
+		"onCommand:extension.partialDiff.markSection2AndTakeDiff",
+		"onCommand:extension.partialDiff.diffSelectionWithClipboard",
+		"onCommand:extension.partialDiff.diffVisibleEditors",
+		"onCommand:extension.partialDiff.togglePreComparisonTextNormalizationRules"
+	],
+	"main": "./out/extension",
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "Partial Diff configurations",
+			"properties": {
+				"partialDiff.hideCommandsOnContextMenu": {
+					"description": "(DEPRECATED) Hide Partial Diff commands on the context menu. Use `partialDiff.commandsOnContextMenu` instead",
+					"type": "boolean",
+					"default": false
+				},
+				"partialDiff.commandsOnContextMenu": {
+					"description": "Commands appear on the context menu. Unlisted commands will appear on the menu",
+					"type": "object",
+					"properties": {
+						"markSection1": {
+							"type": "boolean"
+						},
+						"markSection2AndTakeDiff": {
+							"type": "boolean"
+						},
+						"diffSelectionWithClipboard": {
+							"type": "boolean"
+						},
+						"diffVisibleEditors": {
+							"type": "boolean"
+						},
+						"togglePreComparisonTextNormalizationRules": {
+							"type": "boolean"
+						}
+					},
+					"default": {
+						"markSection1": true,
+						"markSection2AndTakeDiff": true,
+						"diffSelectionWithClipboard": true,
+						"diffVisibleEditors": true,
+						"togglePreComparisonTextNormalizationRules": true
+					},
+					"additionalProperties": false
+				},
+				"partialDiff.preComparisonTextNormalizationRules": {
+					"description": "Rules to normalize texts before taking a diff",
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"name": {
+								"type": "string"
+							},
+							"match": {
+								"type": "string"
+							},
+							"replaceWith": {
+								"oneOf": [
+									{
+										"type": "string"
+									},
+									{
+										"type": "object",
+										"properties": {
+											"letterCase": {
+												"enum": [
+													"upper",
+													"lower"
+												]
+											}
+										},
+										"required": [
+											"letterCase"
+										]
+									}
+								]
+							},
+							"enableOnStart": {
+								"type": "boolean",
+								"default": true
+							}
+						},
+						"required": [
+							"match",
+							"replaceWith"
+						]
+					},
+					"default": []
+				},
+				"partialDiff.enableTelemetry": {
+					"description": "Enable usage data to be sent to the extension authour",
+					"type": "boolean",
+					"default": true
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "extension.partialDiff.markSection1",
+				"title": "Select Text for Compare",
+				"category": "PartialDiff"
+			},
+			{
+				"command": "extension.partialDiff.markSection2AndTakeDiff",
+				"title": "Compare Text with Previous Selection",
+				"category": "PartialDiff"
+			},
+			{
+				"command": "extension.partialDiff.diffSelectionWithClipboard",
+				"title": "Compare Text with Clipboard",
+				"category": "PartialDiff"
+			},
+			{
+				"command": "extension.partialDiff.diffVisibleEditors",
+				"title": "Compare Text in Visible Editors",
+				"category": "PartialDiff"
+			},
+			{
+				"command": "extension.partialDiff.togglePreComparisonTextNormalizationRules",
+				"title": "Toggle Pre-Comparison Text Normalization Rules",
+				"category": "PartialDiff"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"command": "extension.partialDiff.markSection1",
+					"group": "2_partialdiff@1",
+					"when": "editorTextFocus && !config.partialDiff.hideCommandsOnContextMenu && config.partialDiff.commandsOnContextMenu.markSection1"
+				},
+				{
+					"command": "extension.partialDiff.markSection2AndTakeDiff",
+					"group": "2_partialdiff@2",
+					"when": "editorTextFocus && !config.partialDiff.hideCommandsOnContextMenu && config.partialDiff.commandsOnContextMenu.markSection2AndTakeDiff"
+				},
+				{
+					"command": "extension.partialDiff.diffSelectionWithClipboard",
+					"group": "2_partialdiff@3",
+					"when": "editorTextFocus && !config.partialDiff.hideCommandsOnContextMenu && config.partialDiff.commandsOnContextMenu.diffSelectionWithClipboard"
+				},
+				{
+					"command": "extension.partialDiff.diffVisibleEditors",
+					"group": "2_partialdiff@4",
+					"when": "editorTextFocus && !config.partialDiff.hideCommandsOnContextMenu && config.partialDiff.commandsOnContextMenu.diffVisibleEditors"
+				},
+				{
+					"command": "extension.partialDiff.togglePreComparisonTextNormalizationRules",
+					"group": "2_partialdiff@5",
+					"when": "editorTextFocus && !config.partialDiff.hideCommandsOnContextMenu && config.partialDiff.commandsOnContextMenu.togglePreComparisonTextNormalizationRules"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"coverage": "nyc yarn test",
+		"check": "yarn run compile && yarn run lint && yarn test",
+		"compile": "tsc -p ./",
+		"lint": "tslint -p .",
+		"watch": "tsc -watch -p ./",
+		"prep": "yarn run compile && yarn run lint && yarn test",
+		"test": "mocha --opts cli-test-mocha.opts",
+		"test-mode": "mocha --opts cli-test-mocha.opts --watch",
+		"vscode:prepublish": "yarn run compile",
+		"vscode:postpublish": "./tag-release.sh"
+	},
+	"dependencies": {
+		"clipboardy": "1.1.2",
+		"lodash.isequal": "4.5.0",
+		"lodash.omit": "4.5.0",
+		"vscode-extension-telemetry": "0.0.18"
+	},
+	"devDependencies": {
+		"@types/clipboardy": "^1.1.0",
+		"@types/lodash.isequal": "^4.5.3",
+		"@types/lodash.omit": "^4.5.4",
+		"@types/mocha": "^5.2.5",
+		"@types/node": "^7.0.67",
+		"codeclimate-test-reporter": "^0.5.0",
+		"mocha": "^5.0.5",
+		"nyc": "^11.6.0",
+		"testdouble": "^3.7.0",
+		"ts-node": "^7.0.0",
+		"tslint": "^5.11.0",
+		"typescript": "^3.0.1",
+		"vscode": "^1.1.18"
+	},
+	"__metadata": {
+		"id": "79afa437-682e-4fa2-a4fd-87844832a1dc",
+		"publisherId": "78c9c61d-8fc2-48eb-bf5e-7dd8b068702c",
+		"publisherDisplayName": "Ryuichi Inagaki"
+	}
+}

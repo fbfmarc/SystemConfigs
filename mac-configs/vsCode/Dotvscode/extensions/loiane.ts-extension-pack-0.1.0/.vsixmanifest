@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Language="en-US" Id="ts-extension-pack" Version="0.1.0" Publisher="loiane"/>
+    <DisplayName>TypeScript Extension Pack</DisplayName>
+    <Description xml:space="preserve">This extension contains some of the most popular (and some I find very useful) Typescript extensions.</Description>
+    <Tags>TypeScript,TS</Tags>
+    <Categories>Extension Packs,Programming Languages</Categories>
+    <GalleryFlags>Public</GalleryFlags>
+    <Badges></Badges>
+    <Properties>
+      <Property Id="Microsoft.VisualStudio.Code.Engine" Value="^1.26.0" />
+      <Property Id="Microsoft.VisualStudio.Code.ExtensionDependencies" Value="" />
+      <Property Id="Microsoft.VisualStudio.Code.ExtensionPack" Value="eg2.tslint,rbbit.typescript-hero,GregorBiswanger.json2ts,stringham.move-ts,christian-kohler.path-intellisense,pmneo.tsimporter,esbenp.prettier-vscode,msjsdiag.debugger-for-chrome" />
+      
+        <Property Id="Microsoft.VisualStudio.Services.Links.Source" Value="https://github.com/loiane/typescript-extension-pack-vscode" />
+        <Property Id="Microsoft.VisualStudio.Services.Links.Getstarted" Value="https://github.com/loiane/typescript-extension-pack-vscode" />
+        
+          <Property Id="Microsoft.VisualStudio.Services.Links.GitHub" Value="https://github.com/loiane/typescript-extension-pack-vscode" />
+        
+      
+      
+      
+      <Property Id="Microsoft.VisualStudio.Services.Branding.Color" Value="#162d4f" />
+      <Property Id="Microsoft.VisualStudio.Services.Branding.Theme" Value="dark" />
+      <Property Id="Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown" Value="true" />
+      
+      
+    </Properties>
+    
+    <Icon>extension/ts-logo.png</Icon>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Code"/>
+  </Installation>
+  <Dependencies/>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.Code.Manifest" Path="extension/package.json" Addressable="true" />
+    <Asset Type="Microsoft.VisualStudio.Services.Content.Details" Path="extension/README.md" Addressable="true" /><Asset Type="Microsoft.VisualStudio.Services.Content.Changelog" Path="extension/CHANGELOG.md" Addressable="true" /><Asset Type="Microsoft.VisualStudio.Services.Icons.Default" Path="extension/ts-logo.png" Addressable="true" />
+  </Assets>
+</PackageManifest>

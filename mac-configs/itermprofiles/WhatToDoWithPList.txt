@@ -1,0 +1,9 @@
+just upload your *.plist to ~/Library/Preferences.  The file is typically called 
+com.googlecode.iterm2.plist
+
+
+Notice:
+
+within iterm2:
+open preferences and on the "General" screen, make sure the ckeckbox for "Load 
+preferences from a custom folder or URL: is unchecked.

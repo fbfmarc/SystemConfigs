@@ -1,0 +1,120 @@
+{
+	"name": "json-helper",
+	"displayName": "JSON Helper",
+	"description": "Make your navigation in JSON file easier",
+	"license": "MIT",
+	"version": "1.3.2",
+	"publisher": "zhoufeng",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mine2chow/JSON-Helper.git"
+	},
+	"engines": {
+		"vscode": "^1.22.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onLanguage:json"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "jsonHelper.docLink",
+				"title": "Link to documentation"
+			},
+			{
+				"command": "jsonHelper.copyToClipboard",
+				"title": "Copy text to clipboard"
+			},
+			{
+				"command": "jsonHelper.moveToPreviousKey",
+				"title": "Navigate to the previous key of current layer"
+			},
+			{
+				"command": "jsonHelper.moveToNextKey",
+				"title": "Navigate to the next key of current layer"
+			},
+			{
+				"command": "jsonHelper.showNodesInQuickPick",
+				"title": "Show nodes in quick pick"
+			},
+			{
+				"command": "jsonHelper.jsonOutline",
+				"title": "jsonHelper: Show JSON outline"
+			}
+		],
+		"menus": {
+			"commandPalette": [
+				{
+					"command": "jsonHelper.docLink",
+					"when": "false"
+				},
+				{
+					"command": "jsonHelper.copyToClipboard",
+					"when": "false"
+				},
+				{
+					"command": "jsonHelper.moveToPreviousKey",
+					"when": "false"
+				},
+				{
+					"command": "jsonHelper.moveToNextKey",
+					"when": "false"
+				},
+				{
+					"command": "jsonHelper.showNodesInQuickPick",
+					"when": "false"
+				},
+				{
+					"command": "jsonHelper.jsonOutline",
+					"when": "editorLangId == json"
+				}
+			]
+		},
+		"configuration": {
+			"title": "JSON helper configuration",
+			"properties": {
+				"jsonHelper.object.name": {
+					"type": "string",
+					"default": "jsonObj",
+					"description": "JSON object name for showing",
+					"scope": "window"
+				},
+				"jsonHelper.quickpick.maxlayer": {
+					"type": "number",
+					"default": 99,
+					"description": "Max layer for revealing keys in quick pick",
+					"scope": "window"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "",
+		"compile": "tsc -p ./",
+		"watch": "tsc -w -p ./",
+		"update-vscode": "node ./node_modules/vscode/bin/install",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"dependencies": {
+		"clipboardy": "^1.2.3",
+		"jsonc-parser": "^1.0.3",
+		"npm": "^5.8.0",
+		"update": "^0.7.4",
+		"vscode": "^1.1.14"
+	},
+	"devDependencies": {
+		"@types/node": "9.4.6",
+		"typescript": "2.7.2"
+	},
+	"icon": "imgs/JSON-icon.gif",
+	"homepage": "https://github.com/mine2chow/JSON-Helper/blob/master/README.md",
+	"__metadata": {
+		"id": "9966e6d5-359b-4012-bea9-2df3b59b0c32",
+		"publisherId": "e648bf47-1b26-4ce4-951e-a80aba6f7798",
+		"publisherDisplayName": "Feng Zhou"
+	}
+}
