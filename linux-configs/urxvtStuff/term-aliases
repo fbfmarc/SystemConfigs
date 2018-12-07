@@ -1,0 +1,5 @@
+alias bterm='urxvt `cat $HOME/.config/urxvt/bluetoptions`'
+alias rterm='urxvt `cat $HOME/.config/urxvt/redtoptions`'
+alias lterm='urxvt `cat $HOME/.config/urxvt/tlightoptions`'
+alias vlterm='urxvt `cat $HOME/.config/urxvt/vlightoptions`'
+alias dterm='urxvt'

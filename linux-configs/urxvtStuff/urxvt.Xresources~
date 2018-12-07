@@ -1,0 +1,82 @@
+!================
+! URXVT settings
+!================
+
+URxvt.depth:                32
+URxvt.geometry:             85x30
+URxvt.loginShell:           true
+URxvt.internalBorder:       3
+URxvt.lineSpace:            0
+
+! transparency - true or false (default)
+URxvt*transparent: false
+
+! tint with any color; i.e., blue, red, tomato4, olivedrab2, etc.
+!   some nice listings are at:
+!     http://www.nisrv.com/drupal/?q=node/11
+!     http://www.htmlgoodies.com/tutorials/colors/article.php/3478921
+!URxvt*tintColor: S_base03
+
+! shading - 0 to 99 darkens, 101 to 200 lightens.
+!   Do not use with tintColor just use a darker or lighter color instead.
+!URxvt*shading: 85
+
+URxvt*saveLines: 2000
+
+!URxvt*foreground: #657b83
+!URxvt*background: #100b0b
+URxvt*.foreground:   	    	#b0b0b0
+URxvt*.background:   		[95]#171717
+URxvt*.colorBD:	     		#ffffff
+URxvt*.cursorColor:  		#c7c7c7
+URxvt*.cursorColor2: 		#ffffff
+URxvt*.highlightColor:		#574c49
+URxvt*.highlightTextColor:	#c3c7cb
+! black
+URxvt*.color0:       #242728
+URxvt*.color8:       #636667
+
+! red
+URxvt*.color1:       #fd4485
+URxvt*.color9:       #ff80ad
+
+! green
+URxvt*.color2:       #b3e43b
+URxvt*.color10:      #c8ed72
+
+! yellow
+URxvt*.color3:       #ffa827
+URxvt*.color11:      #ebe087
+
+! blue
+URxvt*.color4:       #75e0f2
+URxvt*.color12:      #75e0f2
+
+! magenta
+URxvt*.color5:       #af8afe
+URxvt*.color13:      #af8afe
+
+! cyan
+URxvt*.color6:       #718488
+URxvt*.color14:      #b2c6cb
+
+! white
+URxvt*.color7:       #d6d5d0
+URxvt*.color15:      #f9f9f5
+
+! Linux font
+URxvt*font: xft:Source Code Pro Medium:pixelsize=12
+!URxvt*font: xft:DejaVu Sans Mono:pixelsize=12
+URxvt*boldFont: xft:Source Code Pro Medium:bold:pixelsize=12
+!URxvt*boldFont: xft:DejaVu Sans Mono:bold:pixelsize=12
+!URxvt*letterSpace: -1
+
+! scrollbar - true (default) or false
+URxvt*scrollBar: true
+URxvt*scrollColor: #b0b0b0
+
+! scrollbar position - left=false (default) or right=true
+URxvt*scrollBar_right: true
+
+! scrollbar style - rxvt (default), plain, next, or xterm
+URxvt*scrollstyle: plain
