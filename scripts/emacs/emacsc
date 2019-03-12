@@ -1,4 +1,0 @@
-#!/bin/sh
-# start a new Cocoa instance of emacs
-set -e
-/Applications/Emacs.app/Contents/MacOS/Emacs "$@"
