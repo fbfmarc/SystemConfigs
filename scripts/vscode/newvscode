@@ -1,0 +1,7 @@
+#!/bin/sh
+# small functions to get vs code running from command line.
+# this one opens a new instance of VS code
+VSCODE_CWD="$PWD"
+open -n -b "com.microsoft.VSCode" --args $*
+
+

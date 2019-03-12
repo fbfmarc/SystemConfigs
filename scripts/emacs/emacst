@@ -1,0 +1,4 @@
+#!/bin/sh
+# start aa ner terminal instance
+set -e
+/Applications/Emacs.app/Contents/MacOS/Emacs -nw "$@"
