@@ -14,8 +14,8 @@ please enter the following commands:
 
 ```
 cd $HOME
-ln -s <path-to-SystemConfigs>/SystemConfigs/common-configs/tmus/dotTmux.conf $HOME/.tmux.conf
-ln -s <path-to-SystemConfigs>/SystemConfigs/common-configs/tmus/dotTmux.conf.local $HOME/.tmux.conf.local
+ln -s <path-to-SystemConfigs>/SystemConfigs/common-configs/tmux/dotTmux/dotTmux.conf $HOME/.tmux.conf
+ln -s <path-to-SystemConfigs>/SystemConfigs/common-configs/tmux/dotTmux/dotTmux.conf.local $HOME/.tmux.conf.local
 ```
 
 change controlled customizations are made to the dotTmux.conf.local file
