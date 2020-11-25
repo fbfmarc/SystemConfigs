@@ -1,0 +1,22 @@
+#! /bin/zsh
+#
+# This file contains the actual ".zshrc" content. It is expected to be in a 
+# source control repo and will be sourced by a minimal '.zshrc' in the user's 
+# specified directory for zsh dot files ($ZDOTDIR). 
+
+setopt PROMPT_SUBST
+# update my path to include alacritty terminal color theme changer
+export PATH=$PATH:/Users/dooku/Library/Python/3.7/bin
+# source the git prompt package so its available to the theme
+source $ZDOTDIR/modules/zsh-git-prompt/zshrc.sh
+# source the theme to set the prompt and colors only use themes that work with
+#       the terminal palette, don't use themes that set colors using hex codes
+source $ZDOTDIR/themes/mh-theme_mfc.zsh
+# source the auto suggestions plugin/module
+source $ZDOTDIR/modules/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+# source the package for coloring man pages
+source $ZDOTDIR/modules/colorize-man-pages/colorize-man-pages.zsh
+# source personal aliases and any other packages for aliases
+source $ZDOTDIR/DotAliases
+# finaly source the syntax highlighting package last, it must stay last.
+source $ZDOTDIR/modules/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
