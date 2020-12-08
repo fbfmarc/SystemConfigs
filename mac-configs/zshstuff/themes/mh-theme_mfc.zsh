@@ -7,7 +7,8 @@
 # turns username red if superuser, otherwise it is white
 
 # if superuser make the username red and the end the prompt with a red '!'
-if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="white"; fi
+# if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="white"; fi
+if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="green"; fi
 
 # prompt
 PROMPT='[%{$fg_bold[$NCOLOR]%}%B%n%b%{$reset_color%}%\@%{$fg[cyan]%}%m%{$reset_color%}:%{$fg[magenta]%}%30<...<%~%<<%{$reset_color%}]%B%{$fg_bold[$NCOLOR]%}%(!.#.->)%b%{$reset_color%} '
