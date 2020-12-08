@@ -18,5 +18,6 @@ source $ZDOTDIR/modules/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source $ZDOTDIR/modules/colorize-man-pages/colorize-man-pages.zsh
 # source personal aliases and any other packages for aliases
 source $ZDOTDIR/DotAliases
+source ../../common-configs/AlacrittyTerminal/AlacrittyThemeAliases
 # finaly source the syntax highlighting package last, it must stay last.
 source $ZDOTDIR/modules/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh

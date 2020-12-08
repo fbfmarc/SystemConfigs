@@ -1,0 +1,329 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator
+
+
+# Any items in the `env` entry below will be added as
+# environment variables. Some entries may override variables
+# set by alacritty it self.
+env:
+  # TERM env customization. Default is xterm-256color
+  # Note: the default TERM value `xterm-256color` does not
+  # specify all features alacritty supports. This does pose
+  # a few issues with programs relying on terminfo and the
+  # `tput` command
+  TERM: xterm-256color
+
+# Window dimensions in character columns and lines
+# (changes require restart)
+dimensions:
+  columns: 80
+  lines: 30
+
+# Window position (changes require restart)
+#
+# Specified in number of pixels.
+# If the position is not set, the window manager will handle the placement.
+#position:
+#  x: 0
+#  y: 0
+
+# Window padding (changes require restart)
+#
+# Blank space added around the window in pixels. This padding is scaled
+# by DPI and the specified value is always added at both opposing sides.
+#padding:
+#  x: 0
+#  y: 0
+
+# Spread additional padding evenly around the terminal content.
+#dynamic_padding: false
+
+# Window decorations
+#
+# Values for `decorations`:
+#     - full: Borders and title bar
+#     - none: Neither borders nor title bar
+#
+# Values for `decorations` (macOS only):
+#     - transparent: Title bar, transparent background and title bar buttons
+#     - buttonless: Title bar, transparent background, but no title bar buttons
+#decorations: full
+
+# Startup Mode (changes require restart)
+#
+# Values for `startup_mode`:
+#   - Windowed
+#   - Maximized
+#   - Fullscreen
+#
+# Values for `startup_mode` (macOS only):
+#   - SimpleFullscreen
+#startup_mode: Windowed
+
+# Window title
+#title: Alacritty
+
+# Allow terminal applications to change Alacritty's window title.
+#dynamic_title: true
+
+# Window class (Linux/BSD only):
+#class:
+# Application instance name
+#instance: Alacritty
+# General application class
+#general: Alacritty
+
+# GTK theme variant (Linux/BSD only)
+#
+# Override the variant of the GTK theme. Commonly supported values are `dark` and `light`.
+# Set this to `None` to use the default theme variant.
+#gtk_theme_variant: None
+
+#scrolling:
+# Maximum number of lines in the scrollback buffer.
+# Specifying '0' will disable scrolling.
+#history: 10000
+
+# Scrolling distance multiplier.
+#multiplier: 3
+
+# Background opacity
+#
+# Window opacity as a floating point number from `0.0` to `1.0`.
+# The value `0.0` is completely transparent and `1.0` is opaque.
+background_opacity: 0.95
+
+# The FreeType rasterizer needs to know the device DPI for best results
+# (changes require restart)
+dpi:
+  x: 90.0
+  y: 90.0
+
+# Display tabs using this many cells (changes require restart)
+# tabspaces: 4
+
+# When true, bold text is drawn using the bright variant of colors.
+draw_bold_text_with_bright_colors: false
+
+# Font configuration (changes require restart)
+font:
+  # The normal (roman) font face to use.
+  # Style can be specified to pick a specific face.
+  normal:
+    family: Source Code Pro Light
+    #style: Light
+
+  # The bold font face
+  bold:
+    family: Source Code Pro Light Bold
+    # Style can be specified to pick a specific face.
+    #style: Bold
+
+  # The italic font face
+  italic:
+    family: Source Code Pro Light Italic
+    # Style can be specified to pick a specific face.
+    #style: Italic
+
+  # Point size of the font
+  size: 13.0
+  # Offset is the extra space around each character. offset.y can be thought of
+  # as modifying the linespacing, and offset.x as modifying the letter spacing.
+  offset:
+    x: 1
+    y: 1
+
+  # OS X only: use thin stroke font rendering. Thin strokes are suitable
+  # for retina displays, but for non-retina you probably want this set to
+  # false.
+  use_thin_strokes: false
+
+# Should display the render timer
+debug:
+  render_timer: false
+
+# Use custom cursor colors. If true, display the cursor in the cursor.foreground
+# and cursor.background colors, otherwise invert the colors of the cursor.
+custom_cursor_colors: true
+
+# Colors (these get swapped in with the alacritty-theme program, do not edit)
+colors:
+  # COLORSCHEME: mfc_light.yaml
+  # Default colors
+  primary:
+    # hard contrast: background = '0x1d2021'
+    background: '0xFAF0E6'
+    foreground: '0x191970'
+
+# Cursor colors
+  normal:
+  # Bright colors
+    black: '0x000000'
+    red: '0xDC143C'
+    green: '0x006400'
+    yellow: '0xDAA520'
+    blue: '0x0000CD'
+    magenta: '0xBA55D3'
+    cyan: '0x48D1CC'
+    white: '0xF8F8FF'
+
+  # Bright colors
+  bright:
+    black: '0x696969'
+    red: '0xFF0000'
+    green: '0x228B22'
+    yellow: '0xFFD700'
+    blue: '0x0000FF'
+    magenta: '0xFF00FF'
+    cyan: '0x00FFFF'
+    white: '0xFFFFFF'
+  cursor:
+    text: '0xFEFFFF'
+    cursor: '0x800000'
+
+  # Normal colors
+  dim:
+    black: '0x31363b'
+    red: '0x783228'
+    green: '0x17a262'
+    yellow: '0xb65619'
+    blue: '0x1b668f'
+    magenta: '0x614a73'
+    cyan: '0x186c60'
+    white: '0x63686d'
+  indexed_colors:
+    - {index: 16, color: '0x87711d'}
+    - {index: 17, color: '0xe619c3'}
+    - {index: 18, color: '0x242924'}
+    - {index: 19, color: '0x5e6e5e'}
+    - {index: 20, color: '0x809980'}
+    - {index: 21, color: '0xcfe8cf'}
+visual_bell:
+  animation: EaseOutExpo
+  duration: 0
+
+# Key bindings
+#
+# Each binding is defined as an object with some properties. Most of the
+# properties are optional. All of the alphabetical keys should have a letter for
+# the `key` value such as `V`. Function keys are probably what you would expect
+# as well (F1, F2, ..). The number keys above the main keyboard are encoded as
+# `Key1`, `Key2`, etc. Keys on the number pad are encoded `Number1`, `Number2`,
+# etc.  These all match the glutin::VirtualKeyCode variants.
+#
+# Possible values for `mods`
+# `Command`, `Super` refer to the super/command/windows key
+# `Control` for the control key
+# `Shift` for the Shift key
+# `Alt` and `Option` refer to alt/option
+#
+# mods may be combined with a `|`. For example, requiring control and shift
+# looks like:
+#
+# mods: Control|Shift
+#
+# The parser is currently quite sensitive to whitespace and capitalization -
+# capitalization must match exactly, and piped items must not have whitespace
+# around them.
+#
+# Either an `action` or `chars` field must be present. `chars` writes the
+# specified string every time that binding is activated. These should generally
+# be escape sequences, but they can be configured to send arbitrary strings of
+# bytes. Possible values of `action` include `Paste` and `PasteSelection`.
+key_bindings:
+  - {key: V, mods: Control|Shift, action: Paste}
+  - {key: C, mods: Control|Shift, action: Copy}
+  - {key: Q, mods: Control|Shift, action: Quit}
+  - {key: W, mods: Control|Shift, action: Quit}
+  - {key: Home, chars: "\eOH", mode: AppCursor}
+  - {key: Home, chars: "\e[1~", mode: ~AppCursor}
+  - {key: End, chars: "\eOF", mode: AppCursor}
+  - {key: End, chars: "\e[4~", mode: ~AppCursor}
+  - {key: PageUp, chars: "\e[5~"}
+  - {key: PageDown, chars: "\e[6~"}
+  - {key: Left, mods: Shift, chars: "\e[1;2D"}
+  - {key: Left, mods: Control, chars: "\e[1;5D"}
+  - {key: Left, mods: Alt, chars: "\e[1;3D"}
+  - {key: Left, chars: "\e[D", mode: ~AppCursor}
+  - {key: Left, chars: "\eOD", mode: AppCursor}
+  - {key: Right, mods: Shift, chars: "\e[1;2C"}
+  - {key: Right, mods: Control, chars: "\e[1;5C"}
+  - {key: Right, mods: Alt, chars: "\e[1;3C"}
+  - {key: Right, chars: "\e[C", mode: ~AppCursor}
+  - {key: Right, chars: "\eOC", mode: AppCursor}
+  - {key: Up, mods: Shift, chars: "\e[1;2A"}
+  - {key: Up, mods: Control, chars: "\e[1;5A"}
+  - {key: Up, mods: Alt, chars: "\e[1;3A"}
+  - {key: Up, chars: "\e[A", mode: ~AppCursor}
+  - {key: Up, chars: "\eOA", mode: AppCursor}
+  - {key: Down, mods: Shift, chars: "\e[1;2B"}
+  - {key: Down, mods: Control, chars: "\e[1;5B"}
+  - {key: Down, mods: Alt, chars: "\e[1;3B"}
+  - {key: Down, chars: "\e[B", mode: ~AppCursor}
+  - {key: Down, chars: "\eOB", mode: AppCursor}
+  - {key: Tab, mods: Shift, chars: "\e[Z"}
+  - {key: F1, chars: "\eOP"}
+  - {key: F2, chars: "\eOQ"}
+  - {key: F3, chars: "\eOR"}
+  - {key: F4, chars: "\eOS"}
+  - {key: F5, chars: "\e[15~"}
+  - {key: F6, chars: "\e[17~"}
+  - {key: F7, chars: "\e[18~"}
+  - {key: F8, chars: "\e[19~"}
+  - {key: F9, chars: "\e[20~"}
+  - {key: F10, chars: "\e[21~"}
+  - {key: F11, chars: "\e[23~"}
+  - {key: F12, chars: "\e[24~"}
+  - {key: Back, chars: "\x7F"}
+  - {key: Back, mods: Alt, chars: "\e\x7F"}
+  - {key: Insert, chars: "\e[2~"}
+  - {key: Delete, chars: "\e[3~", mode: AppKeypad}
+  - {key: Delete, chars: "\e[P", mode: ~AppKeypad}
+
+# Mouse bindings
+#
+# Currently doesn't support modifiers. Both the `mouse` and `action` fields must
+# be specified.
+#
+# Values for `mouse`:
+# - Middle
+# - Left
+# - Right
+# - Numeric identifier such as `5`
+#
+# Values for `action`:
+# - Paste
+# - PasteSelection
+# - Copy (TODO)
+mouse_bindings:
+  - {mouse: Middle, action: PasteSelection}
+
+mouse:
+  double_click: {threshold: 300}
+  triple_click: {threshold: 300}
+
+selection:
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>"
+
+cursor:
+  # Cursor style
+  #
+  # Values for `style`:
+  #   - ‚ñá Block
+  #   - _ Underline
+  #   - | Beam
+  style: Block
+
+  # If this is `true`, the cursor will be rendered as a hollow box when the
+  # window is not focused.
+  unfocused_hollow: true
+
+hide_cursor_when_typing: false
+
+# Shell
+#
+# You can set shell.program to the path of your favorite shell, e.g. /bin/fish.
+# Entries in shell.args are passed unmodified as arguments to the shell.
+#shell:
+#  program: /bin/bash
+#  args:
+#    - --login

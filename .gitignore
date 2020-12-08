@@ -1,0 +1,2 @@
+# since zsh directory points to contents of this repo, need to ignore updates to history
+.zsh_history

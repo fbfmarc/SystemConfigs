@@ -1,0 +1,7 @@
+alias altc='alacritty-colorscheme'
+alias altcshow='alacritty-colorscheme -s'
+alias altcsetb16='alacritty-colorscheme -C $HOME/.config/alacritty/Themes/base-16-alacritty-themes -a'
+alias altcsetee='alacritty-colorscheme -C $HOME/.config/alacritty/Themes/eendroroy-alacritty-themes -a'
+alias altceecycle='alacritty-colorscheme -C $HOME/.config/alacritty/Themes/eendroroy-alacritty-themes -T'
+alias altcb16cycle='alacritty-colorscheme -C $HOME/.config/alacritty/Themes/base-16-alacritty-themes -T'
+alias altcdark='alacritty-colorscheme -C $HOME/.config/alacritty/Themes/eendroroy-alacritty-themes -a blood_moon.yaml'

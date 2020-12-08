@@ -1,0 +1,33 @@
+# Colors (MFC Light)
+colors:
+  # Default colors
+  primary:
+    background: '0xFAF0E6'
+    foreground: '0x191970'
+
+# Cursor colors
+  cursor:
+    text:   '0xFEFFFF'
+    cursor: '0x800000'
+
+  # Normal colors
+  normal:
+    black:   '0x000000'
+    red:     '0xDC143C'
+    green:   '0x006400'
+    yellow:  '0xDAA520'
+    blue:    '0x0000CD'
+    magenta: '0xBA55D3'
+    cyan:    '0x48D1CC'
+    white:   '0xF8F8FF'
+
+  # Bright colors
+  bright:
+    black:   '0x696969'
+    red:     '0xFF0000'
+    green:   '0x228B22'
+    yellow:  '0xFFD700'
+    blue:    '0x0000FF'
+    magenta: '0xFF00FF'
+    cyan:    '0x00FFFF'
+    white:   '0xFFFFFF'
