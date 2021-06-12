@@ -114,15 +114,15 @@ font:
 
   # The bold font face
   bold:
-    family: Source Code Pro Light Bold
+    family: Source Code Pro Medium
     # Style can be specified to pick a specific face.
     #style: Bold
 
   # The italic font face
   italic:
-    family: Source Code Pro Light Italic
+    family: Source Code Pro
     # Style can be specified to pick a specific face.
-    #style: Italic
+    style: Light Italic
 
   # Point size of the font
   size: 13.0
@@ -147,35 +147,35 @@ custom_cursor_colors: true
 
 # Colors (these get swapped in with the alacritty-theme program, do not edit)
 colors:
-  # COLORSCHEME: mfc_light.yaml
+  # COLORSCHEME: blood_moon.yaml
   # Default colors
   primary:
     # hard contrast: background = '0x1d2021'
-    background: '0xFAF0E6'
-    foreground: '0x191970'
+    background: '0x10100E'
+    foreground: '0xC6C6C4'
 
-# Cursor colors
+  # Normal colors
   normal:
   # Bright colors
-    black: '0x000000'
-    red: '0xDC143C'
-    green: '0x006400'
-    yellow: '0xDAA520'
-    blue: '0x0000CD'
-    magenta: '0xBA55D3'
-    cyan: '0x48D1CC'
-    white: '0xF8F8FF'
+    black: '0x10100E'
+    red: '0xC40233'
+    green: '0x009F6B'
+    yellow: '0xFFD700'
+    blue: '0x0087BD'
+    magenta: '0x9A4EAE'
+    cyan: '0x20B2AA'
+    white: '0xC6C6C4'
 
   # Bright colors
   bright:
     black: '0x696969'
-    red: '0xFF0000'
-    green: '0x228B22'
-    yellow: '0xFFD700'
-    blue: '0x0000FF'
-    magenta: '0xFF00FF'
-    cyan: '0x00FFFF'
-    white: '0xFFFFFF'
+    red: '0xFF2400'
+    green: '0x03C03C'
+    yellow: '0xFDFF00'
+    blue: '0x007FFF'
+    magenta: '0xFF1493'
+    cyan: '0x00CCCC'
+    white: '0xFFFAFA'
   cursor:
     text: '0xFEFFFF'
     cursor: '0x800000'
@@ -191,13 +191,13 @@ colors:
     cyan: '0x186c60'
     white: '0x63686d'
   indexed_colors:
-    - {index: 16, color: '0x87711d'}
-    - {index: 17, color: '0xe619c3'}
-    - {index: 18, color: '0x242924'}
-    - {index: 19, color: '0x5e6e5e'}
-    - {index: 20, color: '0x809980'}
-    - {index: 21, color: '0xcfe8cf'}
-visual_bell:
+    - {index: 16, color: '0xf08e48'}
+    - {index: 17, color: '0xc43060'}
+    - {index: 18, color: '0x00384d'}
+    - {index: 19, color: '0x517f8d'}
+    - {index: 20, color: '0x869696'}
+    - {index: 21, color: '0xe6e6dc'}
+bell:
   animation: EaseOutExpo
   duration: 0
 

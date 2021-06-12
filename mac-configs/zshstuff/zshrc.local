@@ -6,7 +6,7 @@
 
 setopt PROMPT_SUBST
 # update my path to include alacritty terminal color theme changer
-export PATH=$PATH:/Users/dooku/Library/Python/3.7/bin
+export PATH=$PATH:/Users/dooku/Library/Python/3.9/bin
 # source the git prompt package so its available to the theme
 source $ZDOTDIR/modules/zsh-git-prompt/zshrc.sh
 # source the theme to set the prompt and colors only use themes that work with
